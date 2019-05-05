@@ -5,8 +5,8 @@ def nyc_pigeon_organizer(data)
     array.each do |pigeon|
       if pigeons[pigeon]
         if pigeons[pigeon][category]
-          pigeons[pigeon][category] << attribute 
-        else 
+          pigeons[pigeon][category] << attribute
+        else
           pigeons[pigeon][category] = [attribute]
     end
   else pigeons[pigeon] = {"#{category}: [attribute]"}
