@@ -7,10 +7,10 @@ def nyc_pigeon_organizer(data)
           if pigeon_list[pigeon][attribute_type]
             pigeon_list[pigeon][attribute_type] << attribute
           else
-            pigeon_list[pigeon][attribute_type] = [attribute]
+            pigeon_list[pigeon][attribute_type] = [attribute.to_s]
           end
         else
-          pigeon_list[pigeon] = {"#{attribute_type}": [attribute]}
+          pigeon_list[pigeon] = {"#{attribute_type}": [attribute.to_s]}
         end
       end
     end
