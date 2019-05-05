@@ -13,9 +13,7 @@ def nyc_pigeon_organizer(data)
           pigeon_list[pigeon] = {"#{attribute_type}": [attribute.to_s]}
         end
       end
-    end
   end
-end
   pigeon_list
 end
 end
