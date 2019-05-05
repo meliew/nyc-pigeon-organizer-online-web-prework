@@ -1,16 +1,19 @@
 def nyc_pigeon_organizer(data)
-  pigeons = {}
-  data.each do |category, info|
-    info.each do |attribute, array|
+  pigeon_list = {}
+  data.each do |attribute_type, attributes|
+    attributes.each do |attribute, array|
       array.each do |pigeon|
-        if pigeons[pigeon]
-          if pigeons[pigeon][category]
-            pigeons[pigeon][category] << attribute
+        if pigeon_list[pigeon]
+          if pigeon_list[pigeon][attribute_type]
+            pigeon_list[pigeon][attribute_type] << attribute
           else
-            pigeons[pigeon][category] = [attribute]
+            pigeon_list[pigeon][attribute_type] = [attribute]
           end
-        else pigeons[pigeon] = {"#{category}: [attribute]"}
+        else
+          pigeon_list[pigeon] = {"#{attribute_type}": [attribute]}
         end
       end
     end
   end
+  pigeon_list
+end
